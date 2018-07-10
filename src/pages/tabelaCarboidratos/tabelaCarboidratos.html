@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+        Tabela de Carboidratos
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-searchbar (ionInput)="filtrarAlimentos()"></ion-searchbar>
+
+    <ion-list>
+
+        <button ion-item *ngFor="let alimento of tabelaCarboidratos" (click)="selecionarAlimento(alimento)">
+            {{ alimento.nome }}
+        </button>  
+
+    </ion-list>
+</ion-content>

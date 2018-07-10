@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+        Descrição
+        </ion-title>
+        <ion-buttons start>
+        <button ion-button (click)="fecharModal()">
+            <span ion-text color="primary" showWhen="ios, android">Voltar</span>
+            <ion-icon name="md-close" showWhen="windows"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-avatar style="zoom: 3;" item-start>
+                <img src="{{alimento.imagem}}">
+            </ion-avatar>
+            <h2 style="zoom: 2;">{{alimento.nome}}</h2>
+        </ion-item>
+        <ion-item>
+            Kcal
+            <ion-note item-end>
+                {{alimento.kcal}}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Medida Caseira 
+            <ion-note item-end>
+                {{alimento.medidaCaseira}}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Peso (g/ml)
+            <ion-note item-end>
+                {{alimento.peso}}
+            </ion-note>
+        </ion-item>
+    </ion-list>
+</ion-content>
