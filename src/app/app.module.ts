@@ -14,6 +14,7 @@ import { TabelaCarboidratosPage } from '../pages/tabelaCarboidratos/tabelaCarboi
 import { TabelaCarboidratoModalPage } from '../pages/tabelaCarboidratos/modalTabelaCarboidratos/tabelaCarboidratosModal';
 import { CalculadoraCarboidratosPage } from '../pages/calculadoraCarboidratos/calculadoraCarboidratos';
 import { HistoricoPage } from '../pages/historico/historico';
+import { AnotacoesPage } from '../pages/anotacoes/anotacoes'
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
+    AnotacoesPage,
     TabsPage
   ],
   imports: [
@@ -40,6 +42,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
+    AnotacoesPage,
     TabsPage
   ],
   providers: [
