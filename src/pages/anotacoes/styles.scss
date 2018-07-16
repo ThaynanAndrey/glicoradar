@@ -1,0 +1,13 @@
+.home-container {
+  display:  compact;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+.row {
+  -webkit-flex: 1;
+}
+
+.icon-row {
+  align-items: center;
+}
