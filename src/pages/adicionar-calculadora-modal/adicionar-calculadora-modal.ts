@@ -17,8 +17,7 @@ import {  ModalController, Platform,  ViewController } from 'ionic-angular';
 })
 export class AdicionarCalculadoraModalPage {
 
-    alimento;
-    quantidade; 
+    alimento: any;
 
     constructor(
       public platform: Platform,
@@ -26,12 +25,10 @@ export class AdicionarCalculadoraModalPage {
       public viewCtrl: ViewController
     ) {
       this.alimento = this.params.get('alimento');
-      this.quantidade = '';
     }
   
-    fecharModal(alimento, quantidade) {
-    	alimento.quantidade = quantidade;
-    	console.log(quantidade);
+    fecharModal(alimento) {
+      alimento.quantidade = +alimento.quantidade;
       this.viewCtrl.dismiss(alimento);
     }
   

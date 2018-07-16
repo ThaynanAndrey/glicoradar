@@ -18,11 +18,11 @@
 
 	  <ion-item>
 	    <ion-label floating>Quantidade</ion-label>
-	    <ion-input type="text" (input)="quantidade = $event.target.value"></ion-input>
+	    <ion-input type="text" (input)="alimento.quantidade = $event.target.value"></ion-input>
 	  </ion-item>
 
 	</ion-list>
 
-	<button ion-button (click)="fecharModal(alimento, quantidade)">Adicionar</button>
+	<button ion-button (click)="fecharModal(alimento)">Adicionar</button>
     
 </ion-content>
