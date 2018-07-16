@@ -13,6 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { TabelaCarboidratosPage } from '../pages/tabelaCarboidratos/tabelaCarboidratos';
 import { TabelaCarboidratoModalPage } from '../pages/tabelaCarboidratos/modalTabelaCarboidratos/tabelaCarboidratosModal';
 import { CalculadoraCarboidratosPage } from '../pages/calculadoraCarboidratos/calculadoraCarboidratos';
+import { AdicionarCalculadoraModalPage } from '../pages/adicionar-calculadora-modal/adicionar-calculadora-modal';
 import { HistoricoPage } from '../pages/historico/historico';
 import { AnotacoesPage } from '../pages/anotacoes/anotacoes'
 import { TabsPage } from '../pages/tabs/tabs';
@@ -24,6 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabelaCarboidratosPage,
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
+    AdicionarCalculadoraModalPage,
     HistoricoPage,
     AnotacoesPage,
     TabsPage
@@ -41,6 +43,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabelaCarboidratosPage,
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
+    AdicionarCalculadoraModalPage,
     HistoricoPage,
     AnotacoesPage,
     TabsPage

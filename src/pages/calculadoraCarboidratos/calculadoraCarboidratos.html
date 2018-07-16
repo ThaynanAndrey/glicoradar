@@ -3,15 +3,26 @@
       <ion-title>
         Calculadora
       </ion-title>
-    </ion-navbar>
-  </ion-header>
+    </ion-navbar>  
+</ion-header>
   
-  <ion-content padding>
+<ion-content padding>
+
+  <h1>
+    Cálculo dos carboidratos...
+  </h1>
+
+
+  <ion-searchbar (ionInput)="filtrarAlimentos()"></ion-searchbar>
+
+  <ion-list>
+
+      <button ion-item *ngFor="let alimento of tabelaCarboidratos" (click)="abrirModal(alimento)">
+          {{ alimento.nome }}
+      </button>  
+
+  </ion-list>
+
   
-    <h1>
-      Cálculo dos carboidratos...
-    </h1>
-  
-    
-  </ion-content>
+</ion-content>
   

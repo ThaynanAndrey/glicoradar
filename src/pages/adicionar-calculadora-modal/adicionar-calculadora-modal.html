@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+        {{alimento.nome}}
+        </ion-title>
+        <ion-buttons start>
+        <button ion-button (click)="fecharModal()">
+            <span ion-text color="primary" showWhen="ios, android">Voltar</span>
+            <ion-icon name="md-close" showWhen="windows"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-list>
+
+	  <ion-item>
+	    <ion-label floating>Quantidade</ion-label>
+	    <ion-input type="text" (input)="quantidade = $event.target.value"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+
+	<button ion-button (click)="fecharModal(alimento, quantidade)">Adicionar</button>
+    
+</ion-content>
