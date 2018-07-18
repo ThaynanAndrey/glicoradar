@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { FIREBASE_CONFIG } from './firebase.credentials';
+
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -15,6 +20,7 @@ import { TabelaCarboidratoModalPage } from '../pages/tabelaCarboidratos/modalTab
 import { CalculadoraCarboidratosPage } from '../pages/calculadoraCarboidratos/calculadoraCarboidratos';
 import { HistoricoPage } from '../pages/historico/historico';
 import { TabsPage } from '../pages/tabs/tabs';
+import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemias';
 
 @NgModule({
   declarations: [
@@ -24,13 +30,16 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
-    TabsPage
+    TabsPage,
+    InserirGlicemiasPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +49,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
-    TabsPage
+    TabsPage,
+    InserirGlicemiasPage
   ],
   providers: [
     StatusBar,

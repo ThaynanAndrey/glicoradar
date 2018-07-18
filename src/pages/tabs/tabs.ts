@@ -4,16 +4,19 @@ import { HomePage } from '../home/home';
 import { TabelaCarboidratosPage } from '../tabelaCarboidratos/tabelaCarboidratos';
 import { CalculadoraCarboidratosPage } from '../calculadoraCarboidratos/calculadoraCarboidratos';
 import { HistoricoPage } from '../historico/historico';
+import { InserirGlicemiasPage } from '../inserir-glicemias/inserir-glicemias';
 
 @Component({
   templateUrl: 'tabs.html'
 })
+
 export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = TabelaCarboidratosPage;
   tab3Root = CalculadoraCarboidratosPage;
   tab4Root = HistoricoPage;
+  tab5Root = InserirGlicemiasPage;
 
   constructor() {
 
