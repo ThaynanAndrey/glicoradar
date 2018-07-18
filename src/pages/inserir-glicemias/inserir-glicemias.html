@@ -1,0 +1,38 @@
+<!--
+  Generated template for the InserirGlicemiasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Teste Glicêmico</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<form [formGroup]="glicemiaForm" (ngSubmit)="adicionarGlicemia();">
+		
+		<ion-list>
+		
+			<ion-item>
+				<ion-label>Date</ion-label>
+				<ion-datetime  formControlName="data" displayFormat="DD/MMM/YYYY" [(ngModel)]="glicemia.data"></ion-datetime>
+			</ion-item>
+
+			<ion-item>
+				<ion-label color="primary" floating >Taxa de Glicose (mg/dl)</ion-label>
+				<ion-input formControlName="valor" [(ngModel)]="glicemia.valor"></ion-input>
+			</ion-item>
+
+			<button ion-button type="submit" [disabled]="!glicemiaForm.valid">Salvar</button>
+		</ion-list>
+
+	</form>
+
+
+</ion-content>
