@@ -1,13 +1,22 @@
 .home-container {
-  display:  compact;
+  display: -webkit-flex;
   -webkit-flex-direction: column;
   height: 100%;
 }
-
-.row {
+.home-container > .row {
   -webkit-flex: 1;
 }
 
+.header {
+  -webkit-flex: 1.5 !important;
+  -webkit-align-items: center;
+  background-color: #1abc9c;
+}
+
 .icon-row {
-  align-items: center;
+  -webkit-align-items: center;
+}
+
+.row > .col > .picada {
+  background-color: black;
 }
