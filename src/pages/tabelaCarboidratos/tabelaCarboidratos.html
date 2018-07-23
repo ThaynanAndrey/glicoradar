@@ -1,19 +1,19 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>
-        Tabela de Carboidratos
-        </ion-title>
-    </ion-navbar>
-</ion-header>
-
 <ion-content>
+    <div class = "ion-title" style="text-align: center; margin-bottom: 15px; margin-top: 25px;">
+        <h2 class="info">TABELA DE CARBOIDRATOS</h2>
+    </div>
 
-    <ion-searchbar (ionInput)="filtrarAlimentos()"></ion-searchbar>
-
+    <ion-item>
+        <ion-input [(ngModel)]="filtro" (ngModelChange)="filtrarAlimentos()" type="text" placeholder="Filtrar"></ion-input>
+    </ion-item>
+    
     <ion-list>
 
-        <button ion-item *ngFor="let alimento of tabelaCarboidratos" (click)="selecionarAlimento(alimento)">
-            {{ alimento.nome }}
+        <button ion-item *ngFor="let alimento of tabelaCarboidratos"
+                (click)="selecionarAlimento(alimento)">
+            <div style="font-size: 20px">
+                {{ alimento.nome }}
+            </div>
         </button>  
 
     </ion-list>

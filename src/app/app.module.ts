@@ -14,7 +14,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { ChartsModule } from 'ng2-charts';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { TabelaCarboidratosPage } from '../pages/tabelaCarboidratos/tabelaCarboidratos';
 import { TabelaCarboidratoModalPage } from '../pages/tabelaCarboidratos/modalTabelaCarboidratos/tabelaCarboidratosModal';
 import { CalculadoraCarboidratosPage } from '../pages/calculadoraCarboidratos/calculadoraCarboidratos';
@@ -26,7 +25,6 @@ import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemi
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     TabelaCarboidratosPage,
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
@@ -46,7 +44,6 @@ import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemi
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     TabelaCarboidratosPage,
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,

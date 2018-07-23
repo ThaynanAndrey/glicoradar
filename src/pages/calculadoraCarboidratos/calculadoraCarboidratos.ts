@@ -11,7 +11,7 @@ import { ToastController } from 'ionic-angular'
 export class CalculadoraCarboidratosPage {
 
 	url: string = "https://glicoradar.firebaseio.com/TabelaCarboidratos.json";
-	tabelaCarboidratos: Array<{nome: string, cho: number, kcal: number, medidaCaseira: string, peso: number}>
+	tabelaCarboidratos: Array<{nome: string, cho: number, kcal: number, medidaCaseira: number, peso: number}>
 	alimentos: any[] = [];
 
   constructor(public httpClient: HttpClient,public toastCtrl: ToastController,) {

@@ -16,15 +16,12 @@
 // automatically applied to the <body> element in the app.
 /*custom Ionicon icon*/
 .ion-md-anotacoes {
-    //min-height: 5.6rem;
     max-width: 2rem;
     font-weight: normal;
     color: rgba(60, 60, 60, 0.7);
     padding: 0;
-    content: url("../assets/anotacoes1.svg") !important; 
-
-    
-} 
+    content: url("../assets/anotacoes1.svg") !important;  
+}
 
 .button {
   text-align: center;
@@ -36,4 +33,8 @@
   width: 30rem;
   max-width:6rm;
   border-radius: 5px;
+}
+
+.all-content {
+    background-color: #BCD4E6;
 }

@@ -13,6 +13,8 @@ export class TabelaCarboidratosPage {
 
     url: string = "https://glicoradar.firebaseio.com/TabelaCarboidratos.json";
     tabelaCarboidratos: Array<{nome: string, kcal: number, medidaCaseira: string, peso: number}>;
+    tabelaCarboidratosOriginal: Array<{nome: string, kcal: number, medidaCaseira: string, peso: number}>;
+    filtro: any;
 
     constructor(public navCtrl: NavController,
         public modalCtrl: ModalController, public httpClient: HttpClient) {
@@ -23,6 +25,8 @@ export class TabelaCarboidratosPage {
         this.httpClient.get(this.url)
             .subscribe(tabelaCarboidratos => {
                 this.tabelaCarboidratos = Object.getOwnPropertyNames(tabelaCarboidratos)
+                    .reduce((tabelaFinal, alimento) => tabelaFinal.concat(tabelaCarboidratos[alimento]), []);
+                this.tabelaCarboidratosOriginal = Object.getOwnPropertyNames(tabelaCarboidratos)
                     .reduce((tabelaFinal, alimento) => tabelaFinal.concat(tabelaCarboidratos[alimento]), []);
             });
     }
@@ -37,6 +41,8 @@ export class TabelaCarboidratosPage {
     }
 
     filtrarAlimentos() {
-
+        this.tabelaCarboidratos = this.tabelaCarboidratosOriginal.filter((alimento) =>
+            alimento.nome.toLowerCase().indexOf(this.filtro.toLowerCase()) != -1
+        );
     }
 }
