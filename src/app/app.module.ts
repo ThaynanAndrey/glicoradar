@@ -32,7 +32,7 @@ import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemi
     CalculadoraCarboidratosPage,
     HistoricoPage,
     AnotacoesPage,
-    TabsPage
+    TabsPage,
     InserirGlicemiasPage
   ],
   imports: [
@@ -51,7 +51,9 @@ import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemi
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
-    TabsPage
+    TabsPage,
+    AnotacoesPage,
+    InserirGlicemiasPage
   ],
   providers: [
     StatusBar,
