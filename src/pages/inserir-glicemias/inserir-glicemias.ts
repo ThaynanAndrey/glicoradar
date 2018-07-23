@@ -22,6 +22,7 @@ export class InserirGlicemiasPage {
 
 	glicemia: any = {} as Glicemia;
 	glicemiaDBRef: AngularFireList<Glicemia>[];
+	glicemiaForm: any;
 
 	constructor(public navCtrl: NavController,
 	 public navParams: NavParams,
