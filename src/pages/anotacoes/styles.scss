@@ -1,0 +1,33 @@
+.home-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+.home-container > .row {
+  -webkit-flex: 1;
+  align-content: center;
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.header {
+  -webkit-flex: 1.5 !important;
+  -webkit-align-items: center;
+  background-color: #1abc9c;
+}
+
+.icon-row {
+  -webkit-align-items: center;
+}
+
+.ion-content {
+  background-color: black;
+}
+
+.home-container .ion-title .info {
+  align-content: center;
+}
+
+.all-content {
+  background-color: #67e1d9;
+  
+}

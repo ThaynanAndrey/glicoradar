@@ -14,3 +14,14 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+/*custom Ionicon icon*/
+.ion-md-anotacoes {
+    //min-height: 5.6rem;
+    max-width: 2rem;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    padding: 0;
+    content: url("../assets/anotacoes1.svg") !important; 
+
+    
+} 

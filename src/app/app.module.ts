@@ -19,6 +19,7 @@ import { TabelaCarboidratosPage } from '../pages/tabelaCarboidratos/tabelaCarboi
 import { TabelaCarboidratoModalPage } from '../pages/tabelaCarboidratos/modalTabelaCarboidratos/tabelaCarboidratosModal';
 import { CalculadoraCarboidratosPage } from '../pages/calculadoraCarboidratos/calculadoraCarboidratos';
 import { HistoricoPage } from '../pages/historico/historico';
+import { AnotacoesPage } from '../pages/anotacoes/anotacoes'
 import { TabsPage } from '../pages/tabs/tabs';
 import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemias';
 
@@ -30,7 +31,8 @@ import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemi
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
-    TabsPage,
+    AnotacoesPage,
+    TabsPage
     InserirGlicemiasPage
   ],
   imports: [
@@ -49,8 +51,7 @@ import { InserirGlicemiasPage } from '../pages/inserir-glicemias/inserir-glicemi
     TabelaCarboidratoModalPage,
     CalculadoraCarboidratosPage,
     HistoricoPage,
-    TabsPage,
-    InserirGlicemiasPage
+    TabsPage
   ],
   providers: [
     StatusBar,
