@@ -1,17 +1,40 @@
-<ion-header>
-    <ion-navbar>
-      <ion-title>
-        Calculadora
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
+<ion-content padding>
+
+  <h1 align="center">
+    Calculadora
+  </h1>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Alimentos
+      </ion-col>
+      <ion-col>
+        Quantidade
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let alimento of alimentos">
+      <ion-col>
+        <ion-select [(ngModel)]="alimento.alimento">
+          <ion-option *ngFor="let al of tabelaCarboidratos">{{ al.nome }}</ion-option>
+        </ion-select>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Quantidade</ion-label>
+          <ion-input type="text" [(ngModel)]="alimento.quantidade">Quantidade</ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button ion-button (click)="adicionarAlimento()">
+    +
+  </button>
+
+
+
   
-  <ion-content padding>
-  
-    <h1>
-      Cálculo dos carboidratos...
-    </h1>
-  
-    
-  </ion-content>
+</ion-content>
   
