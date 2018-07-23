@@ -29,7 +29,7 @@ export class InserirGlicemiasPage {
 	 private formBuilder: FormBuilder,
 	 private toastCtrl: ToastController) {
 
-		this.glicemiaDBRef = this.db.list('glicemia-list');
+		this.glicemiaDBRef = this.db.list('glicemia-list') as AngularFireList<Glicemia>[];
 		this.glicemiaForm = this.formBuilder.group({
       		"data":["",Validators.required],
       		"valor": ["",Validators.required]
