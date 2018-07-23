@@ -21,7 +21,7 @@ import { ToastController } from 'ionic-angular';
 export class InserirGlicemiasPage {
 
 	glicemia: any = {} as Glicemia;
-	glicemiaDBRef: AngularFireList<Glicemia>[];
+	glicemiaDBRef: AngularFireList[];
 
 	constructor(public navCtrl: NavController,
 	 public navParams: NavParams,
@@ -29,7 +29,7 @@ export class InserirGlicemiasPage {
 	 private formBuilder: FormBuilder,
 	 private toastCtrl: ToastController) {
 
-		this.glicemiaDBRef = this.db.list('glicemia-list') as AngularFireList<Glicemia>[];
+		this.glicemiaDBRef = this.db.list('glicemia-list');
 		this.glicemiaForm = this.formBuilder.group({
       		"data":["",Validators.required],
       		"valor": ["",Validators.required]
