@@ -8,50 +8,61 @@
 
 
 
-  <ion-content scroll="false">
+  <ion-content class="all-content" scroll="false">
 
     <section class = "home-container">
+      <div class = "ion-title" style="align-self: center;">
+        <h1 class="info" >ANOTAÇÕES</h1>
+      </div>
 
+      <div class = "row icon-row" style="margin: 5% 5% 5% 5%;">
 
-      <div class = "row icon-row">
-
-        <div class = "col text-center"> 
-          <button class = "button button-positive"> <img src="../../assets/anotacoes/teste glicemico.png" style="width : 100% ; height : 100%; max-width: 20rem" ng-click="nextpage()" > </button> 
+        <div class = "col text-center-first" align="center"> 
+            <ion-img  (click)="buttonTapped()" src="../../assets/anotacoes/teste_glicemico.png" style="width: 150px; 
+            height: 100px; background: transparent !important; max-width: 13rem; padding: 1rem 1rem 1rem 1rem;" > </ion-img>
         </div>
 
 
-        <div class = "col text-center">
-          <button class = "button button-positive"> <img src="../../assets/anotacoes/medicamento.png" style="width : 100% ; height : 100%; max-width: 20rem" ng-click="nextpage()" > </button> 
+        <div class = "col text-center" align="center">
+            <ion-img  (click)="buttonTapped()" src="../../assets/anotacoes/medicamento.png" style="width: 150px; 
+            height: 100px; background: transparent !important; max-width: 10rem; padding: 1rem 1rem 1rem 1rem;" > </ion-img>
         </div>
 
       </div>
 
 
-      <div class = "row icon-row">
+      <div class = "row icon-row" style="margin: 5% 5% 5% 5%;">
 
-        <div class = "col text-center">
-          <button class = "button button-positive"> <img src="../../assets/anotacoes/exame.png" style="width : 100% ; height : 100%; max-width: 20rem" ng-click="nextpage()" ></button> 
+        <div class = "col text-center" align="center">
+            <ion-img  (click)="buttonTapped()" src="../../assets/anotacoes/exame.png" style="width: 150px; 
+            height: 100px; background: transparent !important; max-width: 10rem; padding: 1rem 1rem 1rem 1rem;" > </ion-img>
         </div>
 
 
-        <div class = "col text-center">
-          <button class = "button button-positive"> </button>  <img src="../../assets/anotacoes/refeições.png" style="width : 100% ; height : 100%; max-width: 20rem" ng-click="nextpage()" >
+        <div class = "col text-center" align="center">
+            <ion-img  (click)="buttonTapped()" src="../../assets/anotacoes/refeicoes.png" style="width: 150px; 
+            height: 100px; background: transparent !important; max-width: 10rem; margin: 10% 10% 10% 10%; padding: 1rem 1rem 1rem 1rem; background-size: contain;" > </ion-img>
         </div>
 
        </div>
 
 
-      <div class = "row icon-row">
+      <div class = "row icon-row" style="margin: 5% 5% 5% 5%;">
 
-        <div class = "col text-center">
-          <button class = "button button-positive"> </button>  <img src="../../assets/anotacoes/feliz.png" style="width : 100% ; height : 100%; max-width: 20rem" ng-click="nextpage()" >
+        <div class = "col text-center" align="center">
+          <ion-img  (click)="buttonTapped()" src="../../assets/anotacoes/humor.png" style="width: 150px; 
+          height: 100px; background: transparent !important; max-width: 10rem; padding: 1rem 1rem 1rem 1rem;" > </ion-img>
         </div>
 
 
-        <div class = "col text-center">
-          <button class = "button button-positive"> </button>  <img src="../../assets/anotacoes/triste.png" style="width : 100% ; height : 100%; max-width: 20rem;" ng-click="nextpage()" >
+        <div class = "col text-center" align="center">
+          <ion-img  (click)="buttonTapped()" src="../../assets/anotacoes/sintomas.png" style="width: 150px; 
+            height: 100px; background: transparent !important; max-width: 10rem; padding: 1rem 1rem 1rem 1rem;" > </ion-img>
         </div>
 
+      </div>
+      <div class = "row relatorio" style="align-self: center;">
+    <button class = "button button-positive" ng-click="nextpage()" style="text-align: center;  background-color: white; color: red; font-size: 5mm; margin: 1rem 1rem 1rem 1rem; height: 4rem; width: 30rem; max-width:6rm ;"> Gerar Relatório </button>  
       </div>
 
   </section>
