@@ -20,7 +20,39 @@
     font-weight: normal;
     color: rgba(60, 60, 60, 0.7);
     padding: 0;
-    content: url("../assets/anotacoes1.svg") !important;  
+    content: url("../assets/tabicons/anotacoes.svg") !important;  
+}
+
+.ion-md-alerta {
+    max-width: 2rem;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    padding: 0;
+    content: url("../assets/tabicons/alerta.svg") !important;  
+}
+
+.ion-md-grafico {
+    max-width: 2rem;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    padding: 0;
+    content: url("../assets/tabicons/grafico.svg") !important;  
+}
+
+.ion-md-tabela {
+    max-width: 3rem;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    padding: 0;
+    content: url("../assets/tabicons/tabela.svg") !important;  
+}
+
+.ion-md-calculadora {
+    max-width: 2rem;
+    font-weight: normal;
+    color: rgba(60, 60, 60, 0.7);
+    padding: 0;
+    content: url("../assets/tabicons/calculadora.svg") !important;  
 }
 
 .button {

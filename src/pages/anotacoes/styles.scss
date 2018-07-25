@@ -19,9 +19,6 @@
   -webkit-align-items: center;
 }
 
-.ion-content {
-  background-color: black;
-}
 
 .home-container .ion-title .info {
   align-content: center;
@@ -29,4 +26,12 @@
 
 .all-content {
     background-color: #BCD4E6;
+}
+
+.rol-sm-4.text-center {
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
 }
