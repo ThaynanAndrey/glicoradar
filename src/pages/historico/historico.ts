@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'page-historico',
@@ -6,18 +7,48 @@ import { Component } from '@angular/core';
 })
 export class HistoricoPage {
 
+
+    public url = 'https://glicoradar.firebaseio.com/glicemia-list.json';
+    public glicemias: Array<{data: string, valor: string}>;
+    public datas : any[] = [];
+    public valores: any[] = [];
+
     public lineChartData:Array<any> = [
-        {data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56], label: 'Série A'},
-        {data: [28, 48, 40, 19, 86, 27, 90, 28, 48, 40, 19, 86], label: 'Série B'},
-        {data: [18, 48, 77, 9, 100, 27, 40, 18, 48, 77, 9, 100], label: 'Série C'}
+        {data: [70, 80, 85, 80, 130, 120, 115, 99], label: 'Glicose'},
       ];
 
-    public lineChartLabels:Array<any> = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', "Ago", "Set", "Out", "Nov", "Dez"];
+    public lineChartLabels:Array<any> = ['2018-07-22', '2018-07-23',  '2018-07-24', '2018-07-25', ' 2018-07-26', '2018-07-27', '2018-07-28', '2018-07-29'];
     
     public lineChartOptions:any = {
         responsive: true
       };
-    
+
+    constructor(public httpClient: HttpClient) {
+
+      this.obterGlicemias();
+    }
+
+    obterGlicemias() {
+      this.httpClient.get(this.url)
+          .subscribe(glicemias => {
+              this.glicemias = Object.getOwnPropertyNames(glicemias)
+                    .reduce((glicfinal, teste) => glicfinal.concat(glicemias[teste]), []);
+              this.datas = Object.getOwnPropertyNames(glicemias)
+                    .reduce((glicfinal, teste) => glicfinal.concat(glicemias[teste]['data']), []);
+              this.valores = Object.getOwnPropertyNames(glicemias)
+                    .reduce((glicfinal, teste) => glicfinal.concat(glicemias[teste]['valor']), []);
+          });
+      
+    }
+
+    getValores() {
+      for (let glicemia of this.glicemias) {
+          this.datas.push(glicemia['data']);
+          this.valores.push(glicemia['valor']);
+        }
+    }
+
+   
     public lineChartColors:Array<any> = [
         { // grey
           backgroundColor: 'rgba(148,159,177,0.2)',
@@ -49,23 +80,14 @@ export class HistoricoPage {
     
     public lineChartType:string = 'line'; 
       
-    constructor() {
-        
-    }
 
-    public randomize():void {
-        let _lineChartData:Array<any> = new Array(this.lineChartData.length);
-        for (let i = 0; i < this.lineChartData.length; i++) {
-          _lineChartData[i] = {data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label};
-          for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-            _lineChartData[i].data[j] = Math.floor((Math.random() * 100) + 1);
-          }
-        }
-        this.lineChartData = _lineChartData;
-      }
-      
+
       public chartClicked(e:any):void {
-        console.log(e);
+  
+        console.log(this.datas);
+        console.log(this.valores);      
+    //    this.lineChartLabels = this.datas;
+     //   this.lineChartData = this.valores;
       }
       
       public chartHovered(e:any):void {
